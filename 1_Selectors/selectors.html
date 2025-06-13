@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors Showcase</title>
+    <!-- Tailwind CSS CDN for basic styling and responsiveness -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="selectors.css" />
+  </head>
+  <body class="p-6 md:p-10">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl font-bold mb-8 text-center text-blue-700">
+        CSS Selectors Showcase
+      </h1>
+
+      <!-- Basic Selectors -->
+      <div class="example-box">
+        <h2 class="section-title">1. Universal Selector (`*`)</h2>
+        <p>
+          This paragraph and all other elements on this page are affected by the
+          universal selector, setting global margin, padding, and box-sizing.
+        </p>
+        <div>A div is also affected by the universal selector.</div>
+      </div>
+
+      <div class="example-box">
+        <h2 class="section-title">2. Element Selector (`h1`, `p`)</h2>
+        <p class="mb-2">
+          This paragraph demonstrates the element selector (it should have
+          default styling unless another selector overrides it, or if it's
+          affected by a later 'p' selector).
+        </p>
+        <h1 class="text-xl mb-2">
+          This is an H1 heading. Its color is blue from the element selector.
+        </h1>
+        <p>Another paragraph.</p>
+      </div>
+
+      <div class="example-box">
+        <h2 class="section-title">3. Class Selector (`.red-text`)</h2>
+        <p class="red-text mb-2">
+          This text is red because it has the `red-text` class.
+        </p>
+        <div class="red-text">This div also has the `red-text` class.</div>
+      </div>
+
+      <div class="example-box">
+        <h2 class="section-title">4. ID Selector (`#unique-element`)</h2>
+        <p id="unique-element" class="mb-2">
+          This element has the unique ID `unique-element`, so its text is green.
+        </p>
+        <p>This is a regular paragraph, not affected by the ID selector.</p>
+      </div>
+
+      <div class="example-box">
+        <h2 class="section-title">5. Grouping Selector (`h1, h2, h3`)</h2>
+        <p class="mb-2">
+          All headings below should use 'Arial, sans-serif' font.
+        </p>
+        <h1 class="text-2xl mb-2">Grouping Selector H1</h1>
+        <h2 class="text-xl mb-2">Grouping Selector H2</h2>
+        <h3 class="text-lg mb-2">Grouping Selector H3</h3>
+      </div>
+
+      <!-- Pseudo-Class and Pseudo-Element Selectors -->
+      <div class="example-box">
+        <h2 class="section-title">6. Pseudo-class Selector (`:hover`)</h2>
+        <p class="mb-2">Hover over the link below:</p>
+        <a href="#" class="text-blue-500 hover:underline"
+          >Hover over me to see my color change to orange!</a
+        >
+      </div>
+
+      <div class="example-box">
+        <h2 class="section-title">
+          7. Pseudo-element Selector (`::first-line`)
+        </h2>
+        <p class="mb-2">
+          This paragraph has its first line styled with `font-weight: bold`
+          using the `::first-line` pseudo-element selector. The rest of the text
+          remains in its normal weight.
+        </p>
+      </div>
+
+      <!-- Structural Pseudo-classes -->
+      <div class="example-box">
+        <h2 class="section-title">8. Structural Pseudo-classes</h2>
+        <div class="structural-container mb-4 p-4 border rounded-md">
+          <h3 class="text-md font-semibold mb-2">
+            :`first-child`, `:last-child`, `:nth-child`, `:nth-last-child`
+          </h3>
+          <p>
+            1. This is the first paragraph. Its text is green and bold
+            (`:first-child`).
+          </p>
+          <p>
+            2. This is an odd paragraph, so it has a light blue background
+            (`:nth-child(odd)`).
+          </p>
+          <span>This is a span, not a paragraph.</span>
+          <p>
+            3. This is an odd paragraph, so it has a light blue background
+            (`:nth-child(odd)`).
+          </p>
+          <p class="p-2 border rounded-md mb-2">
+            4. This is the second to last paragraph. It has a purple border
+            (`:nth-last-child(2)`).
+          </p>
+          <p>
+            5. This is the last paragraph. Its text is red and bold
+            (`:last-child`).
+          </p>
+        </div>
+
+        <div class="type-container mb-4 p-4 border rounded-md">
+          <h3 class="text-md font-semibold mb-2">
+            :`first-of-type`, `:last-of-type`
+          </h3>
+          <span>First span of type (blue, underlined).</span><br />
+          <em>This is an emphasized element.</em><br />
+          <span>Second span of type.</span><br />
+          <span>Last span of type (pink, italic).</span>
+        </div>
+
+        <div class="nth-of-type-container mb-4 p-4 border rounded-md">
+          <h3 class="text-md font-semibold mb-2">
+            :`nth-of-type(3n)`, `:nth-last-of-type(3)`
+          </h3>
+          <div>Div 1</div>
+          <div>Div 2</div>
+          <div>Div 3 (Green background, `:nth-of-type(3n)`)</div>
+          <div>Div 4</div>
+          <div>Div 5 (Red background, `:nth-last-of-type(3)`)</div>
+          <div>Div 6 (Green background, `:nth-of-type(3n)`)</div>
+          <div>Div 7</div>
+          <div>Div 8</div>
+          <div>Div 9 (Green background, `:nth-of-type(3n)`)</div>
+        </div>
+
+        <div class="only-child-container mb-4 p-4 border rounded-md">
+          <h3 class="text-md font-semibold mb-2">:`only-child`</h3>
+          <p>
+            This paragraph is the only child inside its container, so it has
+            special styling (orange text, light yellow background).
+          </p>
+        </div>
+        <div class="only-child-container mb-4 p-4 border rounded-md">
+          <h3 class="text-md font-semibold mb-2">
+            :`only-child` (No effect here as there are multiple children)
+          </h3>
+          <p>This paragraph is not the only child.</p>
+          <span>Another child element.</span>
+        </div>
+
+        <div class="only-of-type-container mb-4 p-4 border rounded-md">
+          <h3 class="text-md font-semibold mb-2">:`only-of-type`</h3>
+          <div>
+            This div is the only `div` of its type in this container, so it has
+            a thick teal border.
+          </div>
+        </div>
+        <div class="only-of-type-container mb-4 p-4 border rounded-md">
+          <h3 class="text-md font-semibold mb-2">
+            :`only-of-type` (No effect here as there are multiple divs)
+          </h3>
+          <div>Another div.</div>
+          <div>Another div.</div>
+        </div>
+
+        <div class="mb-4 p-4 border rounded-md">
+          <h3 class="text-md font-semibold mb-2">:`root`</h3>
+          <p class="root-example">
+            This text's color is set using a CSS variable defined on `:root`
+            (blue).
+          </p>
+        </div>
+
+        <div
+          class="empty-container mb-4 p-4 border rounded-md flex gap-4 items-center"
+        >
+          <h3 class="text-md font-semibold">:`empty`:</h3>
+          <div></div>
+          <!-- This div is empty -->
+          <div>Not empty</div>
+          <!-- This div is not empty -->
+        </div>
+      </div>
+
+      <!-- User Interface Pseudo-classes -->
+      <div class="example-box">
+        <h2 class="section-title">9. User Interface Pseudo-classes</h2>
+
+        <div class="mb-4 p-4 border rounded-md">
+          <h3 class="text-md font-semibold mb-2">:`enabled`, `:disabled`</h3>
+          <label for="enabledInput" class="block mb-1 text-sm font-medium"
+            >Enabled Input (Light blue background, blue border):</label
+          >
+          <input
+            type="text"
+            id="enabledInput"
+            value="I am enabled"
+            class="mb-2"
+          />
+
+          <label for="disabledInput" class="block mb-1 text-sm font-medium"
+            >Disabled Input (Gray background, grey text):</label
+          >
+          <input
+            type="text"
+            id="disabledInput"
+            value="I am disabled"
+            disabled
+          />
+        </div>
+
+        <div class="mb-4 p-4 border rounded-md">
+          <h3 class="text-md font-semibold mb-2">:`checked`</h3>
+          <input type="checkbox" id="myCheckbox" class="mr-2" />
+          <label for="myCheckbox"
+            >Check me! (Label turns green and bold when checked)</label
+          ><br />
+          <input type="radio" id="radio1" name="radio-group" class="mr-2" />
+          <label for="radio1">Option 1</label><br />
+          <input
+            type="radio"
+            id="radio2"
+            name="radio-group"
+            class="mr-2"
+            checked
+          />
+          <label for="radio2">Option 2 (Checked by default)</label>
+        </div>
+
+        <div class="mb-4 p-4 border rounded-md">
+          <h3 class="text-md font-semibold mb-2">:`focus`, `:focus-visible`</h3>
+          <label for="focusInput" class="block mb-1 text-sm font-medium"
+            >Focus Input (Blue shadow/border when focused):</label
+          >
+          <input type="text" id="focusInput" placeholder="Click or tab here" />
+
+          <label for="focusTextarea" class="block mb-1 text-sm font-medium"
+            >Focus Textarea:</label
+          >
+          <textarea
+            id="focusTextarea"
+            rows="3"
+            placeholder="Type something here"
+          ></textarea>
+
+          <p class="text-sm text-gray-500 mt-2">
+            `focus-visible` is subtle: Try tabbing to the button below for a
+            distinct focus indicator.
+          </p>
+          <button
+            class="bg-blue-500 text-white mt-2 hover:bg-blue-600 focus:outline-none"
+          >
+            Focus-visible Button
+          </button>
+        </div>
+
+        <div class="mb-4 p-4 border rounded-md">
+          <h3 class="text-md font-semibold mb-2">:`target`</h3>
+          <p class="mb-2">Click this link to jump to the target section:</p>
+          <a href="#target-section" class="text-blue-500 hover:underline"
+            >Go to Target Section</a
+          >
+          <p>
+            Scroll down a bit to see the target section after clicking the link.
+          </p>
+          <div class="h-20"></div>
+          <!-- Spacer to ensure scrolling -->
+          <div id="target-section" class="bg-white p-4 border rounded-md">
+            <h4 class="text-lg font-semibold">This is the Target Section!</h4>
+            <p>
+              When you navigate to this section via a URL fragment (like the
+              link above), its background turns light purple and it gets a thick
+              left border.
+            </p>
+          </div>
+        </div>
+
+        <div class="mb-4 p-4 border rounded-md">
+          <h3 class="text-md font-semibold mb-2">
+            :`read-only`, `:read-write`
+          </h3>
+          <label for="readonlyInput" class="block mb-1 text-sm font-medium"
+            >Read-Only Input (Gray background, border):</label
+          >
+          <input
+            type="text"
+            id="readonlyInput"
+            value="Cannot edit this"
+            readonly
+          />
+
+          <label for="readwriteInput" class="block mb-1 text-sm font-medium"
+            >Read-Write Input (White background, blue border):</label
+          >
+          <input type="text" id="readwriteInput" value="You can edit this" />
+        </div>
+
+        <div class="mb-4 p-4 border rounded-md">
+          <h3 class="text-md font-semibold mb-2">:`default`</h3>
+          <form
+            onsubmit="event.preventDefault(); alert('Default button submitted!');"
+          >
+            <label for="username" class="block mb-1 text-sm font-medium"
+              >Username:</label
+            >
+            <input type="text" id="username" name="username" class="mb-2" />
+            <button type="submit" class="mr-2 bg-gray-300">
+              Non-default Submit
+            </button>
+            <button type="submit" class="bg-green-500 text-white">
+              Submit (Default Button - Green)
+            </button>
+          </form>
+        </div>
+
+        <div class="mb-4 p-4 border rounded-md">
+          <h3 class="text-md font-semibold mb-2">
+            :`valid`, `:invalid`, `:required`, `:optional`
+          </h3>
+          <form>
+            <label for="requiredEmail" class="block mb-1 text-sm font-medium"
+              >Required Email (Orange left border; green/red border based on
+              validity):</label
+            >
+            <input
+              type="email"
+              id="requiredEmail"
+              name="requiredEmail"
+              required
+              placeholder="Enter a valid email"
+            />
+
+            <label for="optionalText" class="block mb-1 text-sm font-medium"
+              >Optional Text (Grey left border):</label
+            >
+            <input
+              type="text"
+              id="optionalText"
+              name="optionalText"
+              placeholder="This is optional"
+            />
+
+            <label for="numberRange" class="block mb-1 text-sm font-medium"
+              >Number (Range 10-20):</label
+            >
+            <input
+              type="number"
+              id="numberRange"
+              name="numberRange"
+              min="10"
+              max="20"
+              placeholder="Enter number between 10 and 20"
+            />
+            <p class="text-sm text-gray-500">
+              (:`in-range` is light green, :`out-of-range` is light red)
+            </p>
+          </form>
+        </div>
+
+        <div class="mb-4 p-4 border rounded-md">
+          <h3 class="text-md font-semibold mb-2">:`fullscreen`</h3>
+          <p class="mb-2">
+            Click the button to make the box below go fullscreen (its background
+            will turn black).
+          </p>
+          <button
+            onclick="document.getElementById('fullscreen-target').requestFullscreen()"
+            class="bg-purple-500 text-white hover:bg-purple-600"
+          >
+            Enter Fullscreen
+          </button>
+          <div
+            id="fullscreen-target"
+            class="fullscreen-target bg-gray-200 p-4 mt-4 rounded-md text-center"
+          >
+            <p>This box will go fullscreen. Press ESC to exit.</p>
+          </div>
+        </div>
+
+        <div class="mb-4 p-4 border rounded-md focus-within-group">
+          <h3 class="text-md font-semibold mb-2">
+            :`focus-within` (Parent box border changes when any child input is
+            focused)
+          </h3>
+          <label for="input1" class="block mb-1 text-sm font-medium"
+            >Input 1:</label
+          >
+          <input type="text" id="input1" placeholder="Focus here" />
+          <label for="input2" class="block mb-1 text-sm font-medium"
+            >Input 2:</label
+          >
+          <input type="text" id="input2" placeholder="Or here" />
+        </div>
+      </div>
+
+      <!-- Tree-Structural Pseudo-classes -->
+      <div class="example-box">
+        <h2 class="section-title">
+          10. Tree-Structural Pseudo-class (`:has(selector)`)
+        </h2>
+        <p class="mb-4">
+          `has()` styles a parent element if it contains certain child elements.
+          (Check browser compatibility).
+        </p>
+        <div class="card">
+          <h3>Card with H3 (Light blue background, blue border)</h3>
+          <p>This card contains an `h3` element.</p>
+        </div>
+        <div class="card">
+          <p>This card does NOT have an H3.</p>
+        </div>
+        <div class="card">
+          <h3>Another Card with H3</h3>
+          <p class="warning">
+            This card has a warning paragraph (light red background, red
+            border).
+          </p>
+        </div>
+        <div class="card">
+          <p>This card has a paragraph, but no warning class.</p>
+          <button class="action-btn">
+            Action Button (Light green background, green border)
+          </button>
+        </div>
+      </div>
+
+      <!-- Combinator Selectors -->
+      <div class="example-box combinator-example">
+        <h2 class="section-title">Combinator Selectors</h2>
+
+        <div class="mb-4 p-4 border rounded-md">
+          <h3 class="text-md font-semibold mb-2">
+            11. Descendant Selector (`div p`, `div i.beta`, `div i#beta-id`)
+          </h3>
+          <p>This is a direct child paragraph of this div.</p>
+          <div>
+            <p>
+              This paragraph is a descendant of the outer div (purple text).
+            </p>
+            <span>
+              <p>This nested paragraph is also a descendant (purple text).</p>
+            </span>
+            <p>Another descendant paragraph.</p>
+            <i class="beta"
+              >This is an emphasized tag with class 'beta' (purple text,
+              bold).</i
+            ><br />
+            <i id="beta-id"
+              >This is an emphasized tag with id 'beta-id' (pink,
+              underlined).</i
+            ><br />
+            <i>This is a regular i tag, not styled by descendant selectors.</i>
+          </div>
+        </div>
+
+        <div class="mb-4 p-4 border rounded-md">
+          <h3 class="text-md font-semibold mb-2">
+            12. Child Selector (`div > p`)
+          </h3>
+          <p>This is a direct child paragraph of this div (teal text, bold).</p>
+          <span>
+            <p>This paragraph is NOT a direct child, so it's not teal.</p>
+          </span>
+          <p>Another direct child paragraph (teal text, bold).</p>
+        </div>
+
+        <div class="mb-4 p-4 border rounded-md">
+          <h3 class="text-md font-semibold mb-2">
+            13. Adjacent Sibling Selector (`h1 + p`)
+          </h3>
+          <h1 class="text-xl mb-1">Adjacent Sibling H1</h1>
+          <p>
+            This paragraph immediately follows the H1 and is its adjacent
+            sibling (brown, italic).
+          </p>
+          <p>This paragraph is NOT an adjacent sibling, so it's not brown.</p>
+        </div>
+
+        <div class="mb-4 p-4 border rounded-md">
+          <h3 class="text-md font-semibold mb-2">
+            14. General Sibling Selector (`h1 ~ p`)
+          </h3>
+          <h1 class="text-xl mb-1">General Sibling H1</h1>
+          <p>This is the first paragraph sibling (gray, dotted border).</p>
+          <div>Not a paragraph sibling.</div>
+          <p>This is another paragraph sibling (gray, dotted border).</p>
+          <span>Another element.</span>
+          <p>Yet another paragraph sibling (gray, dotted border).</p>
+        </div>
+      </div>
+
+      <!-- Attribute Selectors -->
+      <div class="example-box attribute-example">
+        <h2 class="section-title">Attribute Selectors</h2>
+
+        <div class="mb-4 p-4 border rounded-md">
+          <h3 class="text-md font-semibold mb-2">
+            15. `[attribute]`, 16. `[attribute="value"]`, 17. `[attr1][attr2]`,
+            18. `[attribute="value" i]`
+          </h3>
+          <label for="basicText" class="block mb-1 text-sm font-medium"
+            >`type="text"` (Black border):</label
+          >
+          <input type="text" id="basicText" placeholder="Regular text input" />
+
+          <label
+            for="textWithPlaceholder"
+            class="block mb-1 text-sm font-medium"
+            >`type="text"` and `placeholder` (Blue border):</label
+          >
+          <input
+            type="text"
+            id="textWithPlaceholder"
+            placeholder="Text with placeholder"
+          />
+
+          <label for="caseInsensitive" class="block mb-1 text-sm font-medium"
+            >`type="TEXT"` (Case-insensitive match, black border):</label
+          >
+          <input
+            type="TEXT"
+            id="caseInsensitive"
+            placeholder="Type attribute is TEXT"
+          />
+
+          <input type="checkbox" id="attrCheckbox" class="mr-2" />
+          <label for="attrCheckbox"
+            >Check me! (Background yellow, border orange when checked)</label
+          >
+        </div>
+
+        <div class="mb-4 p-4 border rounded-md">
+          <h3 class="text-md font-semibold mb-2">
+            19. Attribute String Patterns: `^=`, `$=`, `*=`, `~=`, `|=`
+          </h3>
+          <p class="mb-2">Links:</p>
+          <a href="https://example.com" class="text-blue-500 hover:underline"
+            >Link starting with "https://" (Green, bold)</a
+          ><br />
+          <a href="http://example.com" class="text-blue-500 hover:underline"
+            >Link starting with "http://" (No special style)</a
+          >
+
+          <p class="mt-4 mb-2">Images:</p>
+          <img
+            src="https://placehold.co/100x100/ADD8E6/000000?text=PNG"
+            alt="PNG Image"
+            class="block"
+          />
+          <!-- Will have blue border -->
+          <img
+            src="https://placehold.co/100x100/F08080/000000?text=JPG"
+            alt="JPG Image"
+            class="block mt-2"
+          />
+          <!-- No special border -->
+
+          <p class="mt-4 mb-2">Class containing substring:</p>
+          <span class="my-icon-star">Icon-Star</span>
+          <span class="icon-camera">Icon-Camera</span>
+          <span class="no-icon">No icon</span>
+
+          <p class="mt-4 mb-2">Class containing word:</p>
+          <p class="message warning">
+            This paragraph has a "warning" class word (Yellow background).
+          </p>
+          <p class="important-note">This paragraph does not.</p>
+
+          <p class="mt-4 mb-2">Language attribute:</p>
+          <p lang="en">This is in English (italic, blue bottom border).</p>
+          <p lang="en-US">
+            This is also in US English (italic, blue bottom border).
+          </p>
+          <p lang="fr">Ceci est en français (No special style).</p>
+        </div>
+      </div>
+
+      <!-- Negation Pseudo-class -->
+      <div class="example-box negation-example">
+        <h2 class="section-title">
+          20. Negation Pseudo-class (`:not(.highlight)`)
+        </h2>
+        <p class="mb-2">
+          Divs without the `.highlight` class will have a light gray background.
+        </p>
+        <div class="highlight">
+          This div has the `highlight` class (light blue background).
+        </div>
+        <div>
+          This div does NOT have the `highlight` class (light gray background).
+        </div>
+        <div class="another-class">
+          This div also does NOT have the `highlight` class (light gray
+          background).
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
