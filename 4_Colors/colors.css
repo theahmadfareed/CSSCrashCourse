@@ -1,0 +1,161 @@
+h1 {
+    text-align: center;
+}
+
+.box {
+    padding: 10px;
+    margin: 0.5em 0;
+    border-radius: 0.5em;
+}
+
+.one {
+    background-color: antiquewhite;
+}
+
+.two {
+    background-color: blueviolet;
+}
+
+.three {
+    background-color: greenyellow;
+}
+
+.four {
+    background-color: #02798b;
+}
+
+.five {
+    background-color: #c55da1;
+}
+
+.six {
+    background-color: #128a7d;
+}
+
+.seven {
+    background-color: rgb(255, 0, 0);
+}
+
+.eight {
+    background-color: rgb(0, 255, 0);
+}
+
+.nine {
+    background-color: rgb(0, 0, 255);
+}
+
+.ten {
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+.eleven {
+    background-color: rgba(0, 255, 0, 0.5);
+}
+
+.twelve {
+    background-color: rgba(0, 0, 255, 0.5);
+}
+
+.thirteen {
+    background-color: hsl(120, 100%, 50%);
+}
+
+.fourteen {
+    background-color: hsl(240, 100%, 50%);
+}
+
+.fifteen {
+    background-color: hsl(60, 100%, 50%);
+}
+
+.sixteen {
+    background-color: hsla(120, 100%, 50%, 0.5);
+}
+
+.seventeen {
+    background-color: hsla(240, 100%, 50%, 0.5);
+}
+
+.eighteen {
+    background-color: hsla(60, 100%, 50%, 0.5);
+}
+
+.nineteen {
+    background-color: hwb(120deg 0% 0%);
+}
+
+.twenty {
+    background-color: hwb(240deg 0% 0%);
+}
+
+.twentyone {
+    background-color: hwb(60deg 0% 0%);
+}
+
+.twentytwo {
+    background-color: hwb(120deg 0% 0% / 0.5);
+}
+
+.twentythree {
+    background-color: hwb(240deg 0% 0% / 0.5);
+}
+
+.twentyfour {
+    background-color: hwb(60deg 0% 0% / 0.5);
+}
+
+.twentyfive {
+    background-color: color(display-p3 0.5 0.2 0.1);
+}
+
+.twentysix {
+    background-color: color(rec2020 0.5 0.2 0.1);
+}
+
+.twentyseven {
+    background-color: color(srgb 0.5 0.2 0.1);
+}
+
+.twentyeight {
+    background-color: color(srgb-linear 0.5 0.2 0.1);
+}
+
+.twentynine {
+    background-color: color(xyz 0.5 0.2 0.1);
+}
+
+.thirty {
+    background-color: color(xyz-d50 0.5 0.2 0.1);
+}
+
+.thirtyone {
+    background-color: color(xyz-d65 0.5 0.2 0.1);
+}
+
+.thirtytwo {
+    background-color: color(display-p3 0.5 0.2 0.1 / 0.5);
+}
+
+.thirtythree {
+    background-color: color(rec2020 0.5 0.2 0.1 / 0.5);
+}
+
+.thirtyfour {
+    background-color: color(srgb 0.5 0.2 0.1 / 0.5);
+}
+
+.thirtyfive {
+    background-color: color(srgb-linear 0.5 0.2 0.1 / 0.5);
+}
+
+.thirtysix {
+    background-color: color(xyz 0.5 0.2 0.1 / 0.5);
+}
+
+.thirtyseven {
+    background-color: color(xyz-d50 0.5 0.2 0.1 / 0.5);
+}
+
+.thirtyeight {
+    background-color: color(xyz-d65 0.5 0.2 0.1 / 0.5);
+}
