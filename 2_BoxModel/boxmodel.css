@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.box{
+    background-color: aquamarine;
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+    border: 2px solid black;
+    width: 500px;
+    height: 40px;
+}
+.inline-box{
+    display: inline;
+    background-color: lightblue;
+    border: 2px solid black;
+    margin-left: 10px;
+    margin-right: 10px;
+    /* margin-top: 10px;
+    margin-bottom: 10px;
+    width: 500px;
+    height: 40px; */
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* width, height, margin top/bottom does not work */
+}
+.inline-block-box{
+    display: inline-block;
+    background-color: rgb(167, 187, 56);
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+    border: 2px solid black;
+    width: 500px;
+    height: 40px;
+}
