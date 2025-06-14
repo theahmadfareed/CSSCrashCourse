@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Units Showcase</title>
+    <link rel="stylesheet" href="units.css" />
+  </head>
+  <body>
+    <h1>CSS Units Showcase</h1>
+
+    <h2>List of Absolute-Units in CSS:</h2>
+    <div class="container">
+      <div class="box absolute-px">px Unit (96px)</div>
+      <div class="box absolute-cm">cm Unit (2cm)</div>
+      <div class="box absolute-mm">mm Unit (20mm)</div>
+      <div class="box absolute-in">in Unit (1in)</div>
+      <div class="box absolute-pt">pt Unit (72pt)</div>
+      <div class="box absolute-pc">pc Unit (6pc)</div>
+    </div>
+
+    <h2>List of Relative-Units in CSS:</h2>
+    <div class="container">
+      <p class="relative-percent">
+        % Unit (50% width of parent, font-size 150%)
+      </p>
+      <div class="box relative-em">em Unit (2em font, 5em width)</div>
+      <div class="box relative-rem">rem Unit (1.5rem font, 10rem width)</div>
+      <div class="container-viewport">
+        <div class="box viewport-vw">vw Unit (20vw width)</div>
+        <div class="box viewport-vh">vh Unit (10vh height)</div>
+        <div class="box viewport-vmin">vmin Unit (15vmin size)</div>
+        <div class="box viewport-vmax">vmax Unit (15vmax size)</div>
+      </div>
+
+      <p class="relative-ch">
+        This text uses the ch unit to define its width, which is relative to the
+        width of the "0" character. This helps maintain readable line lengths.
+      </p>
+
+      <p class="relative-ex">
+        This text uses the ex unit to define its height, relative to the
+        x-height of the font.
+      </p>
+    </div>
+  </body>
+</html>
